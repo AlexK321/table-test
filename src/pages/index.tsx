@@ -10,6 +10,8 @@ import { MainPage } from './MainPage';
 export const AppRoutes = observer(() => {
   const [currentTheme, setCurrentTheme] = useState<string>('dark');
 
+  console.log('Test console');
+
   const renderLayout = () => {
     return (
       <div>

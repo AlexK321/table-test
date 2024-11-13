@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { ServerProgress } from '../../components/ServerProgress';
+import { TableTest } from '../../components/TableTest';
 import { showLogo } from '../../store/reducers/root-reducer';
 import { useAppDispatch, useAppSelector } from '../../store/store';
 
@@ -17,6 +18,7 @@ export const MainPage = () => {
     <MainContainer>
       {/* <div>Header</div>
       <div>Content</div> */}
+      <TableTest />
       <p>Ячейка прогресса сервера</p>
       <div style={{ maxWidth: '300px', margin: '20px 0' }}>
         <input
@@ -31,6 +33,13 @@ export const MainPage = () => {
       <div style={{ maxWidth: '200px' }}>
         <ServerProgress value={progressValue} isSoundNotification={true} isBlink={true} />
       </div>
+      <button
+        onClick={() => {
+          throw new Error('This is your first error!');
+        }}
+      >
+        Break the world
+      </button>
     </MainContainer>
   );
 };
